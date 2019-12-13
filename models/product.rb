@@ -2,7 +2,9 @@ require_relative( '../db/sql_runner' )
 
 class Product
 
-  attr_reader( :id, :name, :description, :buy_cost, :sell_price, :stock_qty, :sales_qty)
+  attr_reader( :id )
+  attr_accessor( :id, :name, :description, :buy_cost, :sell_price, :stock_qty, :sales_qty, :manufacturer_id)
+
 
   def initialize( options )
     @id = options['id'].to_i if options['id']
@@ -46,5 +48,25 @@ class Product
     results = SqlRunner.run( sql )
     return results.map { |hash| Product.new( hash ) }
   end
+
+  def update()
+      sql = "UPDATE products
+      SET
+      (
+        name,
+        description,
+        buy_cost,
+        sell_price,
+        stock_qty,
+        sales_qty,
+        manufacturer_id
+      ) =
+      (
+        $1, $2, $3, $4, $5, $6, $7
+      )
+      WHERE id = $8"
+      values = [@name, @description, @buy_cost, @sell_price, @stock_qty, @sales_qty, @manufacturer_id, @id]
+      SqlRunner.run(sql, values)
+    end
 
 end
