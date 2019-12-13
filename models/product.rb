@@ -41,4 +41,10 @@ class Product
     SqlRunner.run( sql )
   end
 
+  def self.all()
+    sql = "SELECT * FROM products"
+    results = SqlRunner.run( sql )
+    return results.map { |hash| Product.new( hash ) }
+  end
+
 end

@@ -20,5 +20,18 @@ product1 = Product.new({
   "sales_qty" => "15",
   "manufacturer_id" => manufacturer1.id
   })
-
   product1.save
+
+  product2 = Product.new({
+    "name" => "Vocla Fm",
+    "description" => "FM synthesis",
+    "buy_cost" => "50",
+    "sell_price" => "100",
+    "stock_qty" => "5",
+    "sales_qty" => "20",
+    "manufacturer_id" => manufacturer2.id
+    })
+    product2.save
+
+binding.pry
+nil
