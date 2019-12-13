@@ -4,7 +4,7 @@ DROP TABLE manufacturers;
 CREATE TABLE manufacturers
 (
   id SERIAL primary key,
-  name VARCHAR(255) not null,
+  name VARCHAR(255) not null
 );
 
 CREATE TABLE products
@@ -15,6 +15,6 @@ CREATE TABLE products
   buy_cost INT,
   sell_price INT,
   stock_qty INT,
-  sales_qty INT
+  sales_qty INT,
   manufacturer_id INT references manufacturers(id)
 );
