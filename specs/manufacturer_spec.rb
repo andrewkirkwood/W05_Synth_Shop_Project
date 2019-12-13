@@ -7,7 +7,7 @@ require_relative('../models/manufacturer')
 class TestManufacturer < Minitest::Test
 
   def setup
-    @manufacturer1 = Manufacturer.new({"name" => "John"})
+    @manufacturer1 = Manufacturer.new({"name" => "Roland"})
   end
 
   # def test_get_id
@@ -15,7 +15,7 @@ class TestManufacturer < Minitest::Test
   # end
 
   def test_get_name
-    assert_equal("John", @manufacturer1.name)
+    assert_equal("Roland", @manufacturer1.name)
   end
 
 end
