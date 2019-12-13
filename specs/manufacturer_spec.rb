@@ -8,7 +8,14 @@ class TestManufacturer < Minitest::Test
 
   def setup
     @manufacturer1 = Manufacturer.new({"name" => "John"})
+  end
 
+  # def test_get_id
+  #   assert_equal(1, @manufacturer1.id)
+  # end
+
+  def test_get_name
+    assert_equal("John", @manufacturer1.name)
   end
 
 end
