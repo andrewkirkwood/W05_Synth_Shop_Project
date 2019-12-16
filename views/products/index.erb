@@ -1,4 +1,4 @@
-<h1>Products</h1>
+<h1>Product Inventory</h1>
 
 <table>
   <tr>
@@ -13,6 +13,11 @@
     <th>Sell Price</th>
     <td>|</td>
     <th>Manufacturer</th>
+    <td>|</td>
+
+    <th>Modify</th>
+    <td>|</td>
+
   </tr>
 
   <%  @products.each do |product| %>
@@ -27,11 +32,10 @@
     <td>|</td>
     <td><%= product.sell_price %></td>
     <td>|</td>
-
-  </a>
-
-  <td><a href='/manufacturers/<%= product.manufacturer_id %>/'><%= product.manufacturer %></a></td>
-</tr>
-<% end %>
-</table>
-<h4><a href="/products/new"> Add product</a></h4>
+    <td><a href="/manufacturers/<%= product.manufacturer_id %>/"><%= product.manufacturer %></a></td>
+    <td>|<td>
+    <td>Edit<a href="products/<%= product.id %>/edit"></a></td>
+  </tr>
+    <% end %>
+  </table>
+  <h4><a href="/products/new"> Add product</a></h4>

@@ -19,8 +19,14 @@
   <label for='sales_qty'>Sales quantity:</label>
   <input type='text' name='sales_qty' id='sales_qty'></input><br>
 
-  <label for='manufacturer_id'>Manufacturer ID:</label>
-  <input type='text' name='manufacturer_id' id='manufacturer_id'></input><br>
+  <label>Manufacturer:
+    <select name='manufacturer_id' id='manufacturer_id'>
+      <% @manufacturers.each do |manufacturer| %>
+      <option value="<%= manufacturer.id %>"><%= manufacturer.name %></option>
+      <% end %>
+
+    </select><br>
+  </label>
 
   <input class="btn btn--action" type='submit' value="Add!" id='name'>
 </form>
