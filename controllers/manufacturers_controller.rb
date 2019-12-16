@@ -6,13 +6,23 @@ require_relative( '../models/product.rb' )
 
 also_reload( '../models/*' )
 
-get '/manufacturers' do
+get '/manufacturers/?' do
   @manufacturers = Manufacturer.all
   erb (:"manufacturers/index")
 end
 
 get '/manufacturers/new/?' do
   @manufacturers = Manufacturer.all
-  @products = Product.all
   erb(:"manufacturers/new")
+end
+
+get '/manufacturers/:id/?' do
+  @manufacturer = Manufacturer.find(params[:id].to_i)
+  erb(:"manufacturers/show")
+end
+
+post '/manufacturers/?' do
+  @manufacturer = Manufacturer.new(params)
+  @manufacturer.save
+  erb(:"manufacturers/create")
 end

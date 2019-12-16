@@ -1,16 +1,7 @@
 <h1>New manufacturer</h1>
 
 <form action="/manufacturers" method="post">
-  <label>
-  Specify manufacturer:
-    <select name="zombie_id">
-      <% for zombie in @zombies %>
-      <option value="<%= zombie.id %>"><%= zombie.name %></option>
-      <% end %>
-    </select>
-  </label>
-
-
-
-  <input class="btn btn--action" type='submit' value="Bite!">
+  <label for='name'>Specify manufacturer name:</label>
+  <input type='text' name='name' id='name'></input>
+  <input class="btn btn--action" type='submit' value="Add!" id='name'>
 </form>
