@@ -39,3 +39,8 @@ post '/products/:id/update' do
   # binding.pry
   erb(:"products/update")
 end
+
+get '/products/:id/sell/?' do
+  @product = Product.find(params[:id].to_i)
+  erb(:"products/sell")
+end
