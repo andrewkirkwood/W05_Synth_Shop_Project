@@ -1,5 +1,11 @@
 <h1>Product Details: </h1>
 <h2><%= @product.name %></h2>
- <ul>
-   <li>Name: <%= @product.name %></li>
- </ul>
+<ul>
+  <li>Name: <%= @product.name %></li>
+  <li>Description: <%= @product.description %></li>
+  <li>Buy cost: <%= @product.buy_cost %></li>
+  <li>Sell price: <%= @product.sell_price %></li>
+  <li>Stock qty: <%= @product.stock_qty %></li>
+  <li>Sales qty: <%= @product.sales_qty %></li>
+  <li>Manufacturer: <a href='/manufacturers/<%= @product.manufacturer_id %>'<%= @product.manufacturer %></a></li>
+</ul>
