@@ -32,3 +32,8 @@ get '/products/:id/edit/?' do
   @product = Product.find(params[:id].to_i)
   erb(:"products/edit")
 end
+
+post '/products/:id/update' do
+  Product.new(params).update
+  erb(:"products/update")
+end
