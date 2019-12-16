@@ -2,6 +2,8 @@
 
 <table>
   <tr>
+    <th>Modify</th>
+    <td>|</td>
     <th>Name</th>
     <td>|</td>
     <th>Stock Quantity</th>
@@ -15,13 +17,12 @@
     <th>Manufacturer</th>
     <td>|</td>
 
-    <th>Modify</th>
-    <td>|</td>
-
   </tr>
 
   <%  @products.each do |product| %>
   <tr>
+    <td><a href="/products/<%= product.id %>/edit">Edit</a></td>
+    <td>|</td>
     <td><%= product.name %></td>
     <td>|</td>
     <td><%= product.stock_qty %></td>
@@ -34,7 +35,8 @@
     <td>|</td>
     <td><a href="/manufacturers/<%= product.manufacturer_id %>/"><%= product.manufacturer %></a></td>
     <td>|<td>
-    <td>Edit<a href="products/<%= product.id %>/edit"></a></td>
+
+
   </tr>
     <% end %>
   </table>
