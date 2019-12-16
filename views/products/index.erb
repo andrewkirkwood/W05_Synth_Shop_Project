@@ -1,0 +1,24 @@
+<h1>Products</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <td>|</td>
+    <th>Stock Quantity</th>
+    <td>|</td>
+    <th>Sell Price</th>
+    <td>|</td>
+  </tr>
+
+  <%  @products.each do |product| %>
+  <tr>
+    <td><%= product.name %></td>
+    <td>|</td>
+    <td><%= product.stock_qty %></td>
+    <td>|</td>
+    <td><%= product.sell_price %></td>
+    <td>|</td>
+  </tr>
+<% end %>
+
+</table>

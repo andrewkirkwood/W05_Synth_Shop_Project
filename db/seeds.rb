@@ -10,6 +10,8 @@ manufacturer1 = Manufacturer.new({"name" => "Roland"})
 manufacturer1.save
 manufacturer2 = Manufacturer.new({"name" => "Korg"})
 manufacturer2.save
+manufacturer3 = Manufacturer.new({"name" => "Moog"})
+manufacturer3.save
 
 product1 = Product.new({
   "name" => "JX03",
@@ -32,6 +34,8 @@ product1 = Product.new({
     "manufacturer_id" => manufacturer2.id
     })
     product2.save
+
+
 
 binding.pry
 nil
