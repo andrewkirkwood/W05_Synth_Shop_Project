@@ -29,5 +29,5 @@ end
 
 get '/products/:id/edit/?' do
   @product = Product.find(params[:id].to_i)
-  erb(:"product/edit")
+  erb(:"products/edit")
 end
