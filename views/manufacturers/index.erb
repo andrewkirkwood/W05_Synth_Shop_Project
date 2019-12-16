@@ -1,7 +1,9 @@
 <h1>Manufacturers</h1>
 
 <ul>
-  </label><%  @manufacturers.each do |manufacturer| %>
+  <%  @manufacturers.each do |manufacturer| %>
     <li>Name:<%= manufacturer.name %></li>
   <% end %>
 </ul>
+
+<h2><a href="/manufacturers/new"> Add new manufacturer </a></h2>

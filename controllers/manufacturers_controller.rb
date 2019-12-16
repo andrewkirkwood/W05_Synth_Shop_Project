@@ -10,3 +10,9 @@ get '/manufacturers' do
   @manufacturers = Manufacturer.all
   erb (:"manufacturers/index")
 end
+
+get '/manufacturers/new/?' do
+  @manufacturers = Manufacturer.all
+  @products = Product.all
+  erb(:"manufacturers/new")
+end
