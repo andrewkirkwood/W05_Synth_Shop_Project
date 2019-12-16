@@ -6,9 +6,14 @@ require_relative( '../models/product.rb' )
 
 also_reload( '../models/*' )
 
-get '/products' do
+get '/products/?' do
   @products = Product.all
   erb (:"products/index")
+end
+
+get '/products/new/?' do
+  @manufacturers = Manufacturer.all
+  erb(:"products/new")
 end
 
 get '/products/:id/?' do
@@ -16,14 +21,13 @@ get '/products/:id/?' do
   erb(:"products/show")
 end
 
-get '/products/new/?' do
-  @manufacturers = Manufacturer.all
-  @products = Product.all
-  erb(:"products/new")
-end
-
 post '/products/?' do
   @product = Product.new(params)
   @product.save
   redirect to ("/products")
+end
+
+get '/products/:id/edit/?' do
+  @product = Product.find(params[:id].to_i)
+  erb(:"product/edit")
 end
