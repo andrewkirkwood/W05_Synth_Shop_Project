@@ -28,6 +28,7 @@ post '/products/?' do
 end
 
 get '/products/:id/edit/?' do
+  @manufacturers = Manufacturer.all()
   @product = Product.find(params[:id].to_i)
   erb(:"products/edit")
 end
