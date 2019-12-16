@@ -6,8 +6,13 @@
     <td>|</td>
     <th>Stock Quantity</th>
     <td>|</td>
+    <th>Sales Quantity</th>
+    <td>|</td>
+    <th>Buy Cost</th>
+    <td>|</td>
     <th>Sell Price</th>
     <td>|</td>
+    <th>Manufacturer</th>
   </tr>
 
   <%  @products.each do |product| %>
@@ -16,8 +21,13 @@
     <td>|</td>
     <td><%= product.stock_qty %></td>
     <td>|</td>
+    <td><%= product.sales_qty %></td>
+    <td>|</td>
+    <td><%= product.buy_cost %></td>
+    <td>|</td>
     <td><%= product.sell_price %></td>
     <td>|</td>
+    <td><%= product.manufacturer_id %></td>
   </tr>
 <% end %>
 
