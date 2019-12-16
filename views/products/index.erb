@@ -28,10 +28,10 @@
     <td><%= product.sell_price %></td>
     <td>|</td>
 
-    <a href='/manufacturers/<%= product.manufacturer %>/'>Edit</a>
+  </a>
 
-    <td><%= product.manufacturer %></td>
-  </tr>
+  <td><a href='/manufacturers/<%= product.manufacturer_id %>/'><%= product.manufacturer %></a></td>
+</tr>
 <% end %>
-
 </table>
+<h4><a href="/products/new"> Add product</a></h4>
