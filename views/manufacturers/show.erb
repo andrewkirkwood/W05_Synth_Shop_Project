@@ -1,1 +1,7 @@
 <h1>Manufacturer: <%= @manufacturer.name %> </h1>
+<ul>
+
+  <li> Name: <a href='/manufacturers/<%= @manufacturer.id %>'><%= @manufacturer.name %></a><br> Contact name: <%= @manufacturer.contact_name %> <br>Contact number: <%= @manufacturer.contact_number %></li>
+  <a href='/manufacturers/<%= @manufacturer.id %>/edit'>Edit</a>
+
+</ul>

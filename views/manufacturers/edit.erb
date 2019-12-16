@@ -2,6 +2,13 @@
 
 <form action="/manufacturers" method="post">
   <label for="name">Update name:</label>
-  <input type="text" name="name" value="<%= @manufacturer.name %>">
-  <input type="submit" value="Update manufacturer">
+  <input type="text" name="name" value="<%= @manufacturer.name %>"> <br>
+
+  <label for="contact_name">Update contact name:</label>
+  <input type="text" name="contact_name" value="<%= @manufacturer.contact_name %>"><br>
+
+  <label for="name">Update contact number:</label>
+  <input type="number" name="contact_number" value="<%= @manufacturer.contact_number %>"><br>
+
+  <input type="submit" value="Update">
 </form>

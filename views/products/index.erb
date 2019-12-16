@@ -27,7 +27,10 @@
     <td>|</td>
     <td><%= product.sell_price %></td>
     <td>|</td>
-    <td><%= product.manufacturer_id %></td>
+
+    <a href='/manufacturers/<%= product.manufacturer %>/'>Edit</a>
+
+    <td><%= product.manufacturer %></td>
   </tr>
 <% end %>
 

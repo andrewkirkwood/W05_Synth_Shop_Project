@@ -6,11 +6,11 @@ require("pry-byebug")
 Manufacturer.delete_all()
 Product.delete_all()
 
-manufacturer1 = Manufacturer.new({"name" => "Roland"})
+manufacturer1 = Manufacturer.new({"name" => "Roland", "contact_name" => "John Roland", "contact_number" => "0123456789"})
 manufacturer1.save
-manufacturer2 = Manufacturer.new({"name" => "Korg"})
+manufacturer2 = Manufacturer.new({"name" => "Korg", "contact_name" => "Ken Korg", "contact_number" => "9876543210"})
 manufacturer2.save
-manufacturer3 = Manufacturer.new({"name" => "Moog"})
+manufacturer3 = Manufacturer.new({"name" => "Moog", "contact_name" => "Bob Moog", "contact_number" => "54321678910"})
 manufacturer3.save
 
 product1 = Product.new({

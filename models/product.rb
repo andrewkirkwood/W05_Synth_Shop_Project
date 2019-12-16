@@ -50,16 +50,16 @@ class Product
   end
 
   def update()
-      sql = "UPDATE products
-      SET
-      (
-        name,
-        description,
-        buy_cost,
-        sell_price,
-        stock_qty,
-        sales_qty,
-        manufacturer_id
+    sql = "UPDATE products
+    SET
+    (
+      name,
+      description,
+      buy_cost,
+      sell_price,
+      stock_qty,
+      sales_qty,
+      manufacturer_id
       ) =
       (
         $1, $2, $3, $4, $5, $6, $7
@@ -69,4 +69,9 @@ class Product
       SqlRunner.run(sql, values)
     end
 
-end
+    def manufacturer()
+      manufacturer = Manufacturer.find(@manufacturer_id)
+      return manufacturer.name
+    end
+
+  end

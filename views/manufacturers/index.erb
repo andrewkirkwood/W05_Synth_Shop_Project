@@ -1,10 +1,11 @@
 <h1>Manufacturers</h1>
+<h4><a href="/manufacturers/new"> Add new manufacturer </a></h4>
 
 <ul>
   <%  @manufacturers.each do |manufacturer| %>
-    <li>Name:<%= manufacturer.name %></li>
+    <li> Name: <a href='/manufacturers/<%= manufacturer.id %>'><%= manufacturer.name %></a><br> Contact name: <%= manufacturer.contact_name %> <br>Contact number: <%= manufacturer.contact_number %></li>
     <a href='/manufacturers/<%= manufacturer.id %>/edit'>Edit</a>
   <% end %>
 </ul>
 
-<h2><a href="/manufacturers/new"> Add new manufacturer </a></h2>
+<h4><a href="/manufacturers/new"> Add new manufacturer </a></h4>
