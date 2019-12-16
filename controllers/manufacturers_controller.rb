@@ -21,13 +21,12 @@ get '/manufacturers/:id/?' do
   erb(:"manufacturers/show")
 end
 
-get '/manufacturers/:id/edit?' do
+get '/manufacturers/:id/edit/?' do
   @manufacturer = Manufacturer.find(params[:id].to_i)
   erb(:"manufacturers/edit")
 end
 
-post '/manufacturers/?' do
-  @manufacturer = Manufacturer.new(params)
-  @manufacturer.save
-  erb(:"manufacturers/create")
+post '/manufacturers/:id/update/?' do
+  Manufacturer.new(params).update
+  erb(:"manufacturers/update")
 end

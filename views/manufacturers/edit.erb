@@ -1,6 +1,6 @@
 <h2>EDIT: <%= @manufacturer.name %></h2>
 
-<form action="/manufacturers" method="post">
+<form action="/manufacturers/<%= @manufacturer.id %>/update" method="post">
   <label for="name">Update name:</label>
   <input type="text" name="name" value="<%= @manufacturer.name %>"> <br>
 
