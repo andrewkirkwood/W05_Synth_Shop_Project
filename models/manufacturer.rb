@@ -48,7 +48,7 @@ class Manufacturer
       contact_number)
       =  ($1, $2, $3)
       WHERE id = $4"
-      values = [@name, @id]
+      values = [@name, @contact_name, @contact_number, @id]
       SqlRunner.run(sql, values)
     end
 
