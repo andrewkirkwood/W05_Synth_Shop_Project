@@ -34,7 +34,8 @@ get '/products/:id/edit/?' do
 end
 
 post '/products/:id/update' do
-  Product.new(params).update
+  @product = Product.new(params)
+  @product.update
   # binding.pry
   erb(:"products/update")
 end
