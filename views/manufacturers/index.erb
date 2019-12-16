@@ -3,6 +3,7 @@
 <ul>
   <%  @manufacturers.each do |manufacturer| %>
     <li>Name:<%= manufacturer.name %></li>
+    <a href='/manufacturers/<%= manufacturer.id %>/edit'>Edit</a>
   <% end %>
 </ul>
 
