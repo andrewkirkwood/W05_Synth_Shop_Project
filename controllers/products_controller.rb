@@ -1,13 +1,20 @@
 require( 'sinatra' )
 require( 'sinatra/contrib/all' )
-require( 'pry-byebug' )
+require( 'pry' )
 require_relative( '../models/manufacturer.rb' )
 require_relative( '../models/product.rb' )
 
 also_reload( '../models/*' )
-
+# binding.pry
 get '/products/?' do
-  @products = Product.all
+  @manufacturers = Manufacturer.all
+
+  if params[:manufacturer]
+    @manufacturer = Manufacturer.find(params[:manufacturer])
+    @products = @manufacturer.products(@manufacturer.id)
+  else
+    @products = Product.all
+  end
   erb (:"products/index")
 end
 

@@ -7,8 +7,3 @@ body {
   font-family: Arial;
   background-color: #93A8AC;
 };
-
-
-tr:hover {
-          background-color: pink;
-        }

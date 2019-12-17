@@ -2,6 +2,16 @@
 
 <h4><a href="/products/new"> Add</a></h4>
 
+<form action="/products" method="get">
+  <label for="manufacturer-select">Choose manufacturer  </label>
+  <select name="manufacturer" id="manufacturer-select">
+    <% @manufacturers.each do |manufacturer| %>
+    <option value="<%= manufacturer.id %>"><%= manufacturer.name %></option>
+    <% end %>
+  </select>
+  <input class="btn btn--action" type='submit' value="filter!">
+</form>
+
 <table>
   <tr>
     <th>Modify</th>
@@ -25,11 +35,11 @@
 
   <%  @products.each do |product| %>
   <tr>
-    <td><a href="/products/<%= product.id %>/edit">Edit</a></td>
+    <td><a href='/products/<%= product.id %>/edit'>Edit</a></td>
     <td>|</td>
     <td><a href='/products/<%= product.id %>'</a><%= product.name %></td>
     <td>|</td>
-    <td><%= product.stock_qty %></td>
+    <td class=""<%= product.stock_qty %></td>
     <td>|</td>
     <td><%= product.sales_qty %></td>
     <td>|</td>
@@ -44,7 +54,7 @@
     <td>|<td>
 
 
-  </tr>
+    </tr>
     <% end %>
   </table>
   <h4><a href="/products/new"> Add</a></h4>

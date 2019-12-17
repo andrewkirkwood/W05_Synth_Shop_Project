@@ -3,7 +3,7 @@ require_relative( '../db/sql_runner' )
 class Product
 
   attr_reader( :id )
-  attr_accessor( :id, :name, :description, :buy_cost, :sell_price, :stock_qty, :sales_qty, :manufacturer_id)
+  attr_accessor( :name, :description, :buy_cost, :sell_price, :stock_qty, :sales_qty, :manufacturer_id)
 
 
   def initialize( options )
