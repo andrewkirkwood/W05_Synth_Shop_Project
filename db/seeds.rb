@@ -48,8 +48,3 @@ product1 = Product.new({
       "type" => "Monophonic"
       })
       product3.save
-
-
-
-binding.pry
-nil

@@ -18,6 +18,7 @@ end
 
 get '/products/new/?' do
   @manufacturers = Manufacturer.all
+  @types = Product.all_types  
   erb(:"products/new")
 end
 

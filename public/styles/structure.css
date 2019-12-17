@@ -1,19 +1,19 @@
-main.nav_bar {
+.nav_bar {
   background-color: #1CBAB2;
   display: inline;
 }
 
 body {
-  animation: myanimation 10ms infinite;
+  /* animation: myanimation 5ms infinite; */
   font-family: Arial;
-  /* background-color: #93A8AC; */
+  background-color: #93A8AC;
 }
 
 
 
 /* @keyframes myanimation {
   0% {background-color: #330033;}
-  25%{background-color: black;}
+  25%{background-color: white;}
   50%{background-color:  #330033;}
   75%{background-color:black;}
   100% {background-color: #330033;}
