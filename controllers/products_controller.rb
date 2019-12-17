@@ -5,13 +5,10 @@ require_relative( '../models/manufacturer.rb' )
 require_relative( '../models/product.rb' )
 
 also_reload( '../models/*' )
-# binding.pry
 get '/products/?' do
   @manufacturers = Manufacturer.all
-
   if params[:manufacturer]
     @manufacturer = Manufacturer.find(params[:manufacturer])
-    # binding.pry
     @products = @manufacturer.products(@manufacturer.id)
   else
     @products = Product.all

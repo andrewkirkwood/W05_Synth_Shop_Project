@@ -20,18 +20,14 @@
   <input type="number" name="sales_qty" value="<%= @product.sales_qty %>"><br>
 
   <label for="manufacturer_id">Manufacturer:</label>
-
-
-
-
   <select name='manufacturer_id' id="manufacturer_id">
     <% @manufacturers.each do |manufacturer| %>
     <option value="<%= manufacturer.id %>"><%= manufacturer.name %></option>
     <% end %>
-
   </select><br>
 
-
+  <label for="type">Type:</label>
+  <input type="text" name="type" value="<%= @product.type %>"><br>
 
   <input type="submit" value="update">
 </form>

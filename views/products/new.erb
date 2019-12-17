@@ -7,10 +7,10 @@
   <label for='description'> Description:</label>
   <input type='text' name='description' id='description'></input><br>
 
-  <label for='buy_cost'>Buy cost:</label>
+  <label for='buy_cost'>Buy cost: (£)</label>
   <input type='text' name='buy_cost' id='buy_cost'></input><br>
 
-  <label for='sell_price'>Sell price:</label>
+  <label for='sell_price'>Sell price: (£)</label>
   <input type='text' name='sell_price' id='sell_price'></input><br>
 
   <label for='stock_qty'>Stock quantity:</label>
@@ -24,11 +24,19 @@
       <% @manufacturers.each do |manufacturer| %>
       <option value="<%= manufacturer.id %>"><%= manufacturer.name %></option>
       <% end %>
-
     </select><br>
   </label>
-  <h4><a href="/manufacturers/new">Add new manufacturer</a></h4>
+
+  <label for='type'>Type:
+    <select name='type' id='type'>
+      <% @products.all_types.each %>
+      <%= 
+    </select><br>
+  </label>
+  <input type='text' name='type' id='type'></input><br>
 
 
   <input class="btn btn--action" type='submit' value="Add!" id='name'>
 </form>
+
+<h4><a href="/manufacturers/new">Add new manufacturer</a></h4>

@@ -20,7 +20,8 @@ product1 = Product.new({
   "sell_price" => "200",
   "stock_qty" => "10",
   "sales_qty" => "15",
-  "manufacturer_id" => manufacturer1.id
+  "manufacturer_id" => manufacturer1.id,
+  "type" => "Polyphonic"
   })
   product1.save
 
@@ -31,7 +32,8 @@ product1 = Product.new({
     "sell_price" => "100",
     "stock_qty" => "5",
     "sales_qty" => "20",
-    "manufacturer_id" => manufacturer2.id
+    "manufacturer_id" => manufacturer2.id,
+    "type" => "Polyphonic"
     })
     product2.save
 
@@ -42,7 +44,8 @@ product1 = Product.new({
       "sell_price" => "100",
       "stock_qty" => "0",
       "sales_qty" => "20",
-      "manufacturer_id" => manufacturer2.id
+      "manufacturer_id" => manufacturer2.id,
+      "type" => "Monophonic"
       })
       product3.save
 

@@ -18,5 +18,6 @@ CREATE TABLE products
   sell_price INT,
   stock_qty INT,
   sales_qty INT,
-  manufacturer_id INT REFERENCES manufacturers(id) ON DELETE CASCADE
+  manufacturer_id INT REFERENCES manufacturers(id) ON DELETE CASCADE,
+  type VARCHAR(255)
 );

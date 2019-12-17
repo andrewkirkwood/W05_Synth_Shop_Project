@@ -3,7 +3,7 @@ require_relative( '../db/sql_runner' )
 class Product
 
   attr_reader( :id )
-  attr_accessor( :name, :description, :buy_cost, :sell_price, :stock_qty, :sales_qty, :manufacturer_id)
+  attr_accessor( :name, :description, :buy_cost, :sell_price, :stock_qty, :sales_qty, :manufacturer_id, :type)
 
 
   def initialize( options )
@@ -15,6 +15,7 @@ class Product
     @stock_qty = options['stock_qty'].to_i
     @sales_qty = options['sales_qty'].to_i
     @manufacturer_id = options['manufacturer_id'].to_i
+    @type = options['type']
   end
 
   def save
@@ -26,14 +27,15 @@ class Product
       sell_price,
       stock_qty,
       sales_qty,
-      manufacturer_id
+      manufacturer_id,
+      type
     )
     VALUES
     (
-      $1, $2, $3, $4, $5, $6, $7
+      $1, $2, $3, $4, $5, $6, $7, $8
     )
     RETURNING id"
-    values = [@name, @description, @buy_cost, @sell_price, @stock_qty, @sales_qty, @manufacturer_id]
+    values = [@name, @description, @buy_cost, @sell_price, @stock_qty, @sales_qty, @manufacturer_id, @type]
     results = SqlRunner.run(sql, values)
     @id = results.first()['id'].to_i
   end
@@ -59,13 +61,14 @@ class Product
       sell_price,
       stock_qty,
       sales_qty,
-      manufacturer_id
+      manufacturer_id,
+      type
       ) =
       (
-        $1, $2, $3, $4, $5, $6, $7
+        $1, $2, $3, $4, $5, $6, $7, $8
       )
-      WHERE id = $8"
-      values = [@name, @description, @buy_cost, @sell_price, @stock_qty, @sales_qty, @manufacturer_id, @id]
+      WHERE id = $9"
+      values = [@name, @description, @buy_cost, @sell_price, @stock_qty, @sales_qty, @manufacturer_id, @type, @id]
       SqlRunner.run(sql, values)
     end
 
@@ -80,6 +83,14 @@ class Product
       values = [id]
       results = SqlRunner.run( sql, values )
       return Product.new( results.first )
+    end
+
+    def self.all_types()
+      sql = "SELECT * FROM products"
+      results = SqlRunner.run( sql )
+      results2 = results.map { |hash| Product.new(hash) }
+      results3 = results2.map {|item| item.type }
+      return results3.uniq
     end
 
   end

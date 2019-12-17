@@ -3,7 +3,7 @@ require_relative( '../db/sql_runner' )
 class Manufacturer
 
   attr_reader( :id)
-  attr_accessor( :name, :contact_name, :contact_number)
+  attr_accessor( :name, :contact_name, :contact_number, :type)
 
   def initialize( options )
     @id = options['id'].to_i if options['id']
