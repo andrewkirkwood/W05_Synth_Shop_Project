@@ -5,15 +5,20 @@ require_relative( '../models/manufacturer.rb' )
 require_relative( '../models/product.rb' )
 
 also_reload( '../models/*' )
+
 get '/products/?' do
+  @types = Product.all_types
   @manufacturers = Manufacturer.all
   if params[:manufacturer]
     @manufacturer = Manufacturer.find(params[:manufacturer])
     @products = @manufacturer.products(@manufacturer.id)
+  elsif params[:type]
+    @products = Product.give_all_by_type(params[:type])
   else
     @products = Product.all
   end
   erb (:"products/index")
+  binding.pry
 end
 
 get '/products/new/?' do
