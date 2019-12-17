@@ -8,7 +8,9 @@
   <li>Sell price: <%= @product.sell_price %></li>
   <li>Stock qty: <%= @product.stock_qty %></li>
   <li>Sales qty: <%= @product.sales_qty %></li>
-  <li>Manufacturer: <a href='/manufacturers/<%= @product.manufacturer_id %>'<%= @product.manufacturer %></a></li>
+  <li>Manufacturer: <a href='/manufacturers/<%= @product.manufacturer_id %>'</a><%= @product.manufacturer %></li>
 </ul>
+<h4><a href="/manufacturers/new"> Add </a></h4>
+
 
 <a href="/products/<%= @product.id %>/edit">Edit</a>

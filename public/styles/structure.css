@@ -1,0 +1,14 @@
+/* .nav_bar {
+  background-color: #1CBAB2;
+  display: inline;
+}; */
+
+body {
+  font-family: Arial;
+  background-color: #93A8AC;
+};
+
+
+tr:hover {
+          background-color: pink;
+        }

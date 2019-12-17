@@ -27,6 +27,19 @@
 
     </select><br>
   </label>
+  <h4><a href="/manufacturers/new">Add new manufacturer</a></h4>
+
 
   <input class="btn btn--action" type='submit' value="Add!" id='name'>
+</form>
+
+<form action="/products" method="get">
+  <label>
+    <select class="" name="manufacturer">
+      <% @manufacturers.each do |manufacturer| %>
+      if manufacturer.name =
+      <% end %>
+    </select>
+    <input class="btn btn--action" type='submit' value="filter!" id='name'>
+  </label>
 </form>
