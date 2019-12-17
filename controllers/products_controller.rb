@@ -18,7 +18,7 @@ end
 
 get '/products/new/?' do
   @manufacturers = Manufacturer.all
-  @types = Product.all_types  
+  @types = Product.all_types
   erb(:"products/new")
 end
 
@@ -34,6 +34,7 @@ post '/products/?' do
 end
 
 get '/products/:id/edit/?' do
+  @types = Product.all_types
   @manufacturers = Manufacturer.all()
   @product = Product.find(params[:id].to_i)
   erb(:"products/edit")
