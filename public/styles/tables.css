@@ -1,20 +1,19 @@
-/* td:hover {
+td:hover {
           background-color: pink;
           opacity; 20%;
-        } */
+        }
 
 .out-stock {
   background-color: #DE4437;
-  color: #DE4437;
-
-};
+  /* color: #DE4437; */
+}
 
 .low-stock {
   background-color: #FFC107;
-  color: #FFC107;
-};
+  /* color: #FFC107; */
+}
 
 .good-stock {
   background-color: #47C0A8;
-  color: #47C0A8;
-};
+  /* color: #47C0A8; */
+}
