@@ -35,11 +35,11 @@
 
   <%  @products.each do |product| %>
   <tr>
-    <td><a href='/products/<%= product.id %>/edit'>Edit</a></td>
+    <td><a href="/products/<%= product.id %>/edit">Edit</a></td>
     <td>|</td>
-    <td><a href='/products/<%= product.id %>'</a><%= product.name %></td>
+    <td><a href="/products/<%= product.id %>"><%= product.name %></a></td>
     <td>|</td>
-    <td class=""<%= product.stock_qty %></td>
+    <td><%= product.stock_qty %></td>
     <td>|</td>
     <td><%= product.sales_qty %></td>
     <td>|</td>

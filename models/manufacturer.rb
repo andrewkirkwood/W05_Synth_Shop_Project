@@ -73,5 +73,7 @@ class Manufacturer
       WHERE manufacturer_id = $1"
       values = [id]
       results = SqlRunner.run( sql, values)
+      product_array = results.map {|result| Product.new (result)}
+      return product_array
     end
   end

@@ -11,6 +11,7 @@ get '/products/?' do
 
   if params[:manufacturer]
     @manufacturer = Manufacturer.find(params[:manufacturer])
+    # binding.pry
     @products = @manufacturer.products(@manufacturer.id)
   else
     @products = Product.all
