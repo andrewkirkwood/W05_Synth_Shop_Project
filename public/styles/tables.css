@@ -1,3 +1,16 @@
-tr:hover {
+td:hover {
           background-color: pink;
+          opacity; 20%;
         }
+
+.low-stock {
+  background-color: #DE4437;
+  opacity; 20%;
+
+};
+
+.good-stock {
+  background-color: red;
+  align-self: center;
+  text-align: center;
+};
