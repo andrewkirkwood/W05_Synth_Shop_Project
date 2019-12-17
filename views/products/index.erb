@@ -5,6 +5,7 @@
 <form action="/products" method="get">
   <label for="manufacturer-select">Choose manufacturer  </label>
   <select name="manufacturer" id="manufacturer-select">
+    <option value=""></option>
     <% @manufacturers.each do |manufacturer| %>
     <option value="<%= manufacturer.id %>"><%= manufacturer.name %></option>
     <% end %>
