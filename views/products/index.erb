@@ -10,9 +10,22 @@
     <option value="<%= manufacturer.id %>"><%= manufacturer.name %></option>
     <% end %>
   </select>
-  <input class="btn btn--action" type='submit' value="filter!">
+  <input class="btn btn--action" type='submit' value="filter">
+  <a href="/products">clear</a>
 </form>
+
 <br>
+<table>
+  <tr>
+    <th >Key:</th>
+    <th>|</th>
+    <th class="out-stock">Not in stock</th>
+    <th>|</th>
+    <th class="low-stock">Low stock (<5)</th>
+    <th>|</th>
+    <th class="good-stock">Good stock (>5)</th>
+  <tr>
+</table>
 <table>
   <tr>
     <th>Modify</th>

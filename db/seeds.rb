@@ -35,6 +35,17 @@ product1 = Product.new({
     })
     product2.save
 
+    product3 = Product.new({
+      "name" => "Volca Modular",
+      "description" => "Portable modular synthesizer",
+      "buy_cost" => "50",
+      "sell_price" => "100",
+      "stock_qty" => "0",
+      "sales_qty" => "20",
+      "manufacturer_id" => manufacturer2.id
+      })
+      product3.save
+
 
 
 binding.pry
