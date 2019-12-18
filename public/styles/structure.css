@@ -1,20 +1,24 @@
-.nav_bar {
-  background-color: #1CBAB2;
-  display: inline;
+#page-header {
+  font-family: 'Major Mono Display', monospace;
+
 }
 
+/* .nav_bar {
+  background-color: #1CBAB2;
+  display: inline;
+} */
+
 body {
-  /* animation: myanimation 5ms infinite; */
-  font-family: Arial;
+  animation: myanimation 14000ms infinite;
   background-color: #93A8AC;
 }
 
 
 
-/* @keyframes myanimation {
-  0% {background-color: #330033;}
-  25%{background-color: white;}
-  50%{background-color:  #330033;}
-  75%{background-color:black;}
-  100% {background-color: #330033;}
-} */
+@keyframes myanimation {
+  0% {background-color: #93A8AC;}
+  25%{background-color: #A4B494;}
+  50%{background-color:  #CBD4C2;}
+  75%{background-color: #A4B494;}
+  100% {background-color: #CBD4C2;}
+}

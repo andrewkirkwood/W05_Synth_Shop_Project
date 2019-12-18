@@ -84,9 +84,10 @@
     <td>£<%= sprintf("%.2f", (product.sell_price - product.buy_cost)) %></td>
     <td>|</td>
     <td><a href="/manufacturers/<%= product.manufacturer_id %>/"><%= product.manufacturer %></a></td>
-    <td>|<td>
+    <td>|</td>
     <td><%= product.type %></td>
     <td>|</td>
+
 
   </tr>
     <% end %>
