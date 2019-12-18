@@ -1,7 +1,6 @@
 <h1>Manufacturers</h1>
-<h4><a href="/manufacturers/new"> Add </a></h4>
+<h4><a id="add-button" href="/manufacturers/new"> Add manufacturer</a></h4>
 
-<h3>Current Manufacturers</h3>
 <ul>
   <%  @manufacturers.each do |manufacturer| %>
     <li> Name: <a href='/manufacturers/<%= manufacturer.id %>'><%= manufacturer.name %></a><br> Contact name: <%= manufacturer.contact_name %> <br>Contact number: <%= manufacturer.contact_number %></li>
@@ -9,4 +8,4 @@
   <% end %>
 </ul>
 
-<h4><a href="/manufacturers/new"> Add </a></h4>
+<h4><a id="add-button" href="/manufacturers/new"> Add manufacturer</a></h4>

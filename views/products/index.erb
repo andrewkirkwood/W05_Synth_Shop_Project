@@ -1,31 +1,31 @@
 <h1>Product Inventory</h1>
 
 
-<section id="search">
-<h4><a id="add-button" href="/products/new"> Add</a></h4>
+<section >
+<h4><a id="add-button" href="/products/new"> Add product</a></h4>
 
 <form action="/products" method="get">
-  <label for="manufacturer-select">Filter by manufacturer</label>
-  <select name="manufacturer" id="manufacturer-select">
+  <label id="search" for="manufacturer-select">Manufacturer:</label>
+  <select name="manufacturer" id="filter-button">
     <option value=""></option>
     <% @manufacturers.each do |manufacturer| %>
     <option value="<%= manufacturer.id %>"><%= manufacturer.name %></option>
     <% end %>
   </select>
-  <input class="btn btn--action" type='submit' value="filter">
-  <a href="/products">clear</a>
+  <input id="filter-button" type='submit' value="filter">
+  <a id="filter-button" href="/products">clear</a>
 </form>
 
 <form action="/products" method="get">
-  <label for="type-select">Filter by type:</label>
-  <select name="type" id="type-select">
+  <label id="search" for="type-select">Type:</label>
+  <select name="type" id="filter-button">
     <option value=""></option>
     <% @types.each do |type| %>
     <option value="<%= type %>"><%= type %></option>
     <% end %>
   </select>
-  <input class="btn btn--action" type='submit' value="filter">
-  <a href="/products">clear</a>
+  <input id="filter-button" type='submit' value="filter">
+  <a id="filter-button" href="/products">clear</a>
 </form>
 </section >
 
@@ -72,4 +72,4 @@
   </tr>
     <% end %>
   </table>
-  <h4><a id="add-button" href="/products/new"> Add</a></h4>
+  <h4><a id="add-button" href="/products/new"> Add product</a></h4>

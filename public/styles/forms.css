@@ -1,0 +1,16 @@
+#man-form > input {
+    width: 100%;
+    background-color: blue;
+
+}
+
+#select {
+  background-color: #2AA2AF;
+  margin: 5px;
+  padding:5px;
+  wdith: 100%;
+  border-radius: 5px;
+  font-size: 1em;
+  border: black;
+  height: 20px;
+}
