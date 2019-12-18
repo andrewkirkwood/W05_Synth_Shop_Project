@@ -1,12 +1,39 @@
 #page-header {
   font-family: 'Major Mono Display', monospace;
-
+  display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
 }
 
-/* .nav_bar {
-  background-color: #1CBAB2;
-  display: inline;
-} */
+#page-header > section.logo {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-gap: 1em;
+}
+
+#page-header > section.logo > h1 {
+  align-self: center;
+  font-size: 1.8em;
+  letter-spacing: 0.1em;
+}
+
+#page-header > section.logo > i {
+  height: 150px;
+  width: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+#page-header > nav > ul {
+  display: flex;
+  justify-content: flex-end;
+  list-style-type: none;
+  padding: 0;
+}
+
+#page-header > nav > ul > li {
+  margin: 0 1em;
+}
 
 body {
   animation: myanimation 14000ms infinite;

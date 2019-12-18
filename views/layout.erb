@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <script src="https://kit.fontawesome.com/2f1bad2300.js" crossorigin="anonymous"></script>
+
   <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display&display=swap" rel="stylesheet">
 
   <!-- <link rel="icon" href="/images/hazard.png" /> -->
@@ -13,9 +15,10 @@
 <body>
   <header id="page-header">
     <section class="logo">
+      <!-- <i class="fas fa-bolt"></i> -->
       <h1>Synthesiser Shop</h1>
     </section>
-    <nav class="nav_bar">
+    <nav id="main-navigation">
       <ul>
         <li><a href="/">Home</a></li>
         <li><a href="/manufacturers">Manufacturers</a></li>
@@ -25,7 +28,9 @@
   </header>
 
   <main class="">
-
+    <section id="opening">
+      <img src="wires.jpg" alt="wires">
+    </section>
     <section id="">
       <%= yield %>
     </section>
