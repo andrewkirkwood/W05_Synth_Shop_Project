@@ -18,7 +18,6 @@ get '/products/?' do
     @products = Product.all
   end
   erb (:"products/index")
-  binding.pry
 end
 
 get '/products/new/?' do

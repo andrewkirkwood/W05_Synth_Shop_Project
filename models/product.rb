@@ -93,9 +93,9 @@ class Product
       return results3.uniq
     end
 
-    def self.give_all_by_type( types_array )
+    def self.give_all_by_type( type )
       sql = "SELECT * FROM products WHERE type = $1"
-      values = types_array
+      values = [type]
       results = SqlRunner.run( sql, values )
       results2 = results.map { |hash| Product.new(hash) }
       return results2
