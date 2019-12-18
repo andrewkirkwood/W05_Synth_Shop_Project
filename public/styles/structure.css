@@ -1,5 +1,5 @@
 body {
-  margin:5px;
+  margin: 5px;
   padding: 5px
 }
 
@@ -9,8 +9,7 @@ body {
   grid-template-columns: 1fr 1fr;
   align-items: center;
   background-color: #FCAA67;
-  padding:5px;
-  border: 5px;
+  padding: 5px;
 }
 
 a:visited {color: black;} /* Visited link    */
