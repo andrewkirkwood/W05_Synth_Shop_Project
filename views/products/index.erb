@@ -1,6 +1,8 @@
 <h1>Product Inventory</h1>
 
-<h4><a href="/products/new"> Add</a></h4>
+
+<section id="search">
+<h4><a id="add-button" href="/products/new"> Add</a></h4>
 
 <form action="/products" method="get">
   <label for="manufacturer-select">Filter by manufacturer</label>
@@ -25,40 +27,29 @@
   <input class="btn btn--action" type='submit' value="filter">
   <a href="/products">clear</a>
 </form>
+</section >
 
 
 <br>
-<table>
+<table id="inventory-table">
   <tr>
     <th >Key:</th>
-    <th>|</th>
     <th class="out-stock">Not in stock</th>
-    <th>|</th>
     <th class="low-stock">Low stock (<5)</th>
-    <th>|</th>
     <th class="good-stock">Good stock (>5)</th>
   <tr>
 </table>
-<table>
+<table id="inventory-table">
   <tr>
     <th></th>
-    <td>|</td>
     <th>Name</th>
-    <td>|</td>
     <th>Stock Quantity</th>
-    <td>|</td>
     <th>Sales Quantity</th>
-    <td>|</td>
     <th>Buy Cost</th>
-    <td>|</td>
     <th>Sell Price</th>
-    <td>|</td>
     <th>Mark up</th>
-    <td>|</td>
     <th>Manufacturer</th>
-    <td>|</td>
     <th>Type</th>
-    <td>|</td>
   </tr>
 
   <%  @products.each do |product| %>
@@ -70,26 +61,15 @@
     <%="good-stock"%>
     <% end %>>
     <td><a href="/products/<%= product.id %>/edit">Edit</a></td>
-    <td>|</td>
     <td><a href="/products/<%= product.id %>"><%= product.name %></a></td>
-    <td>|</td>
     <td><%= product.stock_qty %></td>
-    <td>|</td>
     <td><%= product.sales_qty %></td>
-    <td>|</td>
     <td>£<%= sprintf("%.2f", product.buy_cost) %></td>
-    <td>|</td>
     <td>£<%= sprintf("%.2f", product.sell_price) %></td>
-    <td>|</td>
     <td>£<%= sprintf("%.2f", (product.sell_price - product.buy_cost)) %></td>
-    <td>|</td>
     <td><a href="/manufacturers/<%= product.manufacturer_id %>/"><%= product.manufacturer %></a></td>
-    <td>|</td>
     <td><%= product.type %></td>
-    <td>|</td>
-
-
   </tr>
     <% end %>
   </table>
-  <h4><a href="/products/new"> Add</a></h4>
+  <h4><a id="add-button" href="/products/new"> Add</a></h4>

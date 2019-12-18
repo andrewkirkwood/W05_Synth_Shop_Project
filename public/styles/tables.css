@@ -17,3 +17,22 @@ td:hover {
   background-color: #47C0A8;
   /* color: #47C0A8; */
 }
+
+#inventory-table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+
+}
+
+table {
+  width: 100%;
+}
+
+th {
+  height: 50px;
+  background-color: white;
+}
+
+td {
+  height: 40px;
+}
