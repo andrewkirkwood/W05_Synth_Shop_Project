@@ -90,6 +90,19 @@ body {
 
 }
 
+#man-display > li {
+  padding: 10px;
+  margin: 10px;
+  display: inline-block;
+  opacity: 70%;
+  grid-gap: 10px;
+  background-color: white;
+  border-radius: 5px;
+  align-content: space-between;
+  text-align: left;
+
+}
+
 
 @keyframes myanimation {
   0% {background-color: #93A8AC;}
